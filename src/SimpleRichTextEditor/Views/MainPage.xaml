@@ -1,0 +1,37 @@
+﻿<!-- Main page definition and required XAML namespaces -->
+<Page
+    x:Class="SimpleRichTextEditor.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SimpleRichTextEditor.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:SimpleRichTextEditor.Controls"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <!-- Root layout container for the whole page -->
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <!-- Define two rows: top for toolbar, bottom for editor -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <controls:EditorToolbar             
+            BlackClicked="EditorToolbar_BlackClicked"
+            RedClicked="EditorToolbar_RedClicked"
+            BlueClicked="EditorToolbar_BlueClicked"
+            YellowBackgroundClicked="EditorToolbar_YellowBackgroundClicked"
+            ClearBackgroundClicked="EditorToolbar_ClearBackgroundClicked">
+        </controls:EditorToolbar>
+
+        <!-- Main writing area -->
+        <RichEditBox x:Name="Editor" Grid.Row="1"
+                     Margin="12"
+                     PlaceholderText="Write your note here..."
+                     HorizontalAlignment="Stretch"
+                     VerticalAlignment="Stretch" />
+    </Grid>
+
+</Page>

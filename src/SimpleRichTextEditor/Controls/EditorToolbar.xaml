@@ -1,0 +1,19 @@
+﻿<UserControl
+    x:Class="SimpleRichTextEditor.Controls.EditorToolbar"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <StackPanel Orientation="Horizontal" Padding="12">
+
+        <!-- Button for black text -->
+        <Button Content="Black" Click="BlackButton_Click" Margin="0,0,8,0" />
+        <!-- Button for red text -->
+        <Button Content="Red" Click="RedButton_Click" Margin="0,0,8,0" />
+        <!-- Button for blue text -->
+        <Button Content="Blue" Click="BlueButton_Click" Margin="0,0,8,0" />
+        <!-- Button for yellow background -->
+        <Button Content="Yellow BG" Click="YellowBackgroundButton_Click" Margin="0,0,8,0" />
+        <!-- Button for clearing background -->
+        <Button Content="Clear BG" Click="ClearBackgroundButton_Click"/>
+    </StackPanel>
+</UserControl>
